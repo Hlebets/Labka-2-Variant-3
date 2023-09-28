@@ -9,10 +9,10 @@ if user_input.isdigit():
 
     num_str = str(num)
 
-    for digit in num_str:
+    for index, digit in enumerate(num_str, start=1):
         count = int(digit)
         histogram = "#" * count
-        explanation = f"Розряд {digit}: "
+        explanation = f"Розряд {index}: "
 
         if count == 1:
             explanation += f"{count} символ"
