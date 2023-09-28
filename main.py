@@ -12,6 +12,16 @@ if user_input.isdigit():
     for digit in num_str:
         count = int(digit)
         histogram = "#" * count
+        explanation = f"Розряд {digit}: "
+
+        if count == 1:
+            explanation += f"{count} символ"
+        elif 1 < count < 5:
+            explanation += f"{count} символи"
+        else:
+            explanation += f"{count} символів"
+
+        print(explanation)
         print(histogram)
 
 else:
