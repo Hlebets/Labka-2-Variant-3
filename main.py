@@ -9,10 +9,15 @@ if user_input.isdigit():
 
     num_str = str(num)
 
-    for index, digit in enumerate(num_str, start=1):
+    for digit in user_input:
         count = int(digit)
         histogram = "#" * count
-        explanation = f"Розряд {index}: "
+
+        print(histogram)
+
+    for index, digit in enumerate(user_input, start=1):
+        count = int(digit)
+        explanation = "Пояснення: \n"f"Розряд {index}: "
 
         if count == 1:
             explanation += f"{count} символ"
@@ -22,7 +27,6 @@ if user_input.isdigit():
             explanation += f"{count} символів"
 
         print(explanation)
-        print(histogram)
 
 else:
-    print("Error: Введене значення не є цілим числом")
+    print("Error: Введене значення не є цілим числом.")
