@@ -6,9 +6,6 @@ while True:
     user_input = input("Введіть довільне ціле число: ")
 
     if user_input.isdigit():
-        num = int(user_input)
-
-        num_str = str(num)
 
         for digit in user_input:
             count = int(digit)
